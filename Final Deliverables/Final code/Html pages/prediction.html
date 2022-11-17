@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#logo{
+  float: left;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+  <form id="" method="POST" action="/result" enctype="multipart/form-data">
+  <div class="topnav">
+        <a  id="logo" href="#">Vechile Damage Detection</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+        <a href="{{ url_for('index') }}">Home</a>
+      </div>
+   <div style="padding-top: 20px;">
+    <input type="file" name="image" id=""/>
+    <input type="submit"/>
+   </div>
+   <div>
+    {% if value %}
+      <h3 style="text-align: center ;">The Estimated cost For The Damage Is: {{value}} </h3>
+    {% endif %}
+  </div>
+  </form>
+      <div class="footer">
+        <p>Copyright@2021.All Rights Reserved</p>
+      </div>
+</body>
+</html>
