@@ -15,7 +15,7 @@ from cloudant.client import Cloudant
 
 
 # Authenticate using an IAM API key
-client = Cloudant.iam('89960404-75bd-450c-b867-5a6c536ba5c8-bluemix','wGEpkjvf45s1kQ6Y8T3DChB6phLCOcUZFeQ9klBUy4e2',connect=True)
+client = Cloudant.iam('username','apikey',connect=True)
 
 # Create a database using an initialized client
 my_database = client.create_database ('my_database')
